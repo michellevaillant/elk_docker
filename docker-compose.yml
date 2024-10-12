@@ -153,7 +153,7 @@ services:
     user: root
     volumes:
       - certs:/usr/share/logstash/certs
-      - ./logstash_data/:/usr/share/logstash/data
+      - logstashdata01:/usr/share/logstash/data
       - ./logstash/pipelines:/usr/share/logstash/pipeline
       - ./logstash/input/csv_input:/usr/share/logstash/csv_input
       - ./logstash/pipelines.yml:/usr/share/logstash/config/pipelines.yml
