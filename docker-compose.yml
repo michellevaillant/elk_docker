@@ -64,6 +64,8 @@ services:
         condition: service_healthy
     image: docker.elastic.co/logstash/logstash:${STACK_VERSION}
     user: root
+    ports:
+      - "5044:5044"
     volumes:
       - logstashdata01:/usr/share/logstash/data
       - ./logstash/pipelines:/usr/share/logstash/pipeline
